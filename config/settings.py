@@ -44,6 +44,9 @@ MY_APPS = [
     'users',
     'app_news',
     'app_announcements',
+    'app_standards_foundation',
+    'app_building_regulations',
+    'app_connection',
 
 ]
 

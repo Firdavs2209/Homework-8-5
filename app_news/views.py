@@ -1,5 +1,4 @@
-from django.shortcuts import render
-from requests import Response
+
 from rest_framework import viewsets
 
 from .models import NewsModel,StandardsModel,UnitsModel,LeadershipModel
@@ -11,6 +10,7 @@ from .permissions import IsAuthenticatedOrReadOnly
 class NewsViewSet(viewsets.ModelViewSet):
     queryset = NewsModel.objects.all()
     serializer_class = NewsSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
     def list(self, request):
         queryset = NewsModel.objects.all()
         serializer_class = NewsSerializer
