@@ -2,7 +2,6 @@ from django.contrib.auth import get_user_model
 from django.db import models
 
 
-# Create your models here.
 class PasswordResets(models.Model):
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     reset_code = models.CharField(max_length=10)
